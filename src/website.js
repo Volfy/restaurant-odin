@@ -1,5 +1,4 @@
 const content = document.querySelector("#content");
-import Food from './food.png';
 
 function makeHeader () {
     const header = document.createElement('header');
@@ -22,25 +21,21 @@ function makeHeader () {
     nav.append(home, menu, contact);
     header.append(heading, nav);
     content.appendChild(header);
+    return [home, menu, contact];
 }
 
-function makeMain () {
+function makeMain (page) {
     // check where we are
     const main = document.createElement('main');
 
-
-
-
-    const home = document.createElement('div');
-    home.classList += 'home';
-    const image = document.createElement('img');
-    image.alt = "Ai-generated Pasta Dish";
-    image.src = Food;
-    const text = document.createElement('div');
-    text.textContent = "The food we serve is definitely real";
-    home.append(image, text);
-    main.appendChild(home);
+    main.appendChild(page);
     content.appendChild(main);
+}
+
+function refreshMain (page) {
+    const main = document.querySelector('main');
+    main.innerHTML = "";
+    main.appendChild(page);
 }
 
 function makeFooter () {
@@ -52,10 +47,14 @@ function makeFooter () {
     content.appendChild(footer);
 }
 
-function initSite () {
-    makeHeader();
-    makeMain();
+function initSite (page) {
+    //content.innerHTML = "";
+
+    const navBtns = makeHeader();
+    makeMain(page);
     makeFooter();
+
+    return navBtns;
 }
 
-export {initSite};
+export {initSite, refreshMain};
