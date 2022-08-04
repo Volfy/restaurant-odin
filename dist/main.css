@@ -33,9 +33,15 @@ footer {
     
 }
 
-.home {
+.home, .menu {
     background-color: grey;
-    padding: 100px;
+    padding: 20px; 
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 20px; 
 }
 
 img {
