@@ -35,13 +35,13 @@ footer {
 
 .home, .menu, .contact {
     background-color: lightsalmon;
-    padding: 20px; 
+    padding: 25px; 
 }
 
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    column-gap: 20px; 
+    column-gap: 25px; 
 }
 
 img {
