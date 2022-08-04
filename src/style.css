@@ -33,7 +33,7 @@ footer {
     
 }
 
-.home, .menu {
+.home, .menu, .contact {
     background-color: grey;
     padding: 20px; 
 }
