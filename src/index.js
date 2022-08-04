@@ -1,7 +1,6 @@
-import Food from './food.png';
+
 import './style.css';
 
-import { makeHeader } from './website';
+import { initSite } from './website';
 
-makeHeader();
-
+initSite();
