@@ -34,15 +34,13 @@ function getMenu () {
 }
 
 function getContact () {
-    const home = document.createElement('div');
-    home.classList += 'menu';
-    const image = document.createElement('img');
-    image.alt = "Ai-generated Pasta Dish";
-    image.src = Food;
-    const text = document.createElement('div');
-    text.textContent = "This is actually the contact page, lol";
-    home.append(image, text);
-    return home;
+    // don't feel like adding a form right now
+    const contact = document.createElement('div');
+    contact.classList += 'contact';
+    const text = document.createElement('p');
+    text.textContent = "Contact us at 123-456-7890";
+    contact.appendChild(text);
+    return contact;
 }
 
 export {getHome, getMenu, getContact};
