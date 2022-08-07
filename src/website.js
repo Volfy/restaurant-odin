@@ -8,15 +8,17 @@ function makeHeader () {
     const menu = document.createElement('button');
     const contact = document.createElement('button');
 
-    heading.classList += 'res-name';
-    home.classList += 'home-btn';
-    menu.classList += 'menu-btn';
-    contact.classList += 'contact-btn';
+    heading.classList += 'res-name title';
+    home.classList += 'home-btn pagination-link button is-medium';
+    menu.classList += 'menu-btn pagination-link button is-medium';
+    contact.classList += 'contact-btn pagination-link button is-medium';
 
-    heading.textContent = "Restaurant Name";
+    heading.textContent = "AI Restaurant";
     home.textContent = "Home";
     menu.textContent = "Menu";
     contact.textContent = "Contact";
+
+    nav.classList += "pagination";
 
     nav.append(home, menu, contact);
     header.append(heading, nav);
@@ -27,6 +29,7 @@ function makeHeader () {
 function makeMain (page) {
     // check where we are
     const main = document.createElement('main');
+    main.classList += "container";
 
     main.appendChild(page);
     content.appendChild(main);
@@ -43,6 +46,8 @@ function makeFooter () {
     const para = document.createElement('p');
 
     para.textContent = "Made by Me More than All Rights Reserved";
+    footer.classList += "footer";
+    
     footer.appendChild(para);
     content.appendChild(footer);
 }

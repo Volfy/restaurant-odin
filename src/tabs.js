@@ -5,11 +5,14 @@ function getHome () {
     const home = document.createElement('div');
     home.classList += 'home';
     const image = document.createElement('img');
+    const fig = document.createElement('figure');
     image.alt = "Ai-generated Pasta Dish";
     image.src = Food;
+    fig.classList += "image is-128x128";
     const text = document.createElement('div');
     text.textContent = "The food we serve is definitely real";
-    home.append(image, text);
+    fig.appendChild(image);
+    home.append(fig, text);
     return home;
 }
 
@@ -23,11 +26,14 @@ function getMenu () {
         const hold = document.createElement('div');
         hold.classList += "food-item";
         const image = document.createElement('img');
+        const fig = document.createElement('figure');
         image.src = img;
         image.alt = alt;
+        fig.classList += "image is-128x128";
         const text = document.createElement('p');
         text.textContent = desc;
-        hold.append(image, text);
+        fig.appendChild(image);
+        hold.append(fig, text);
         menu.appendChild(hold);
     })
     return menu;
